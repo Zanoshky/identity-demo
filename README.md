@@ -26,6 +26,6 @@ curl -X POST \
     "email": "marko@zanoski.com",
     "password": "123123",
     "phoneNumber": "21332",
-    "identity": "@twitterhandle"
+    "identifier": "@twitterhandle"
 }'
 ```
