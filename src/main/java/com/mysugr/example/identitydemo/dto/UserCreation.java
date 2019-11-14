@@ -10,7 +10,7 @@ public class UserCreation {
     private String email;
 
     @XmlElement
-    private String identity;
+    private String identifier;
 
     @XmlElement
     private String phoneNumber;

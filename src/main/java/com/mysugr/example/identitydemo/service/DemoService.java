@@ -1,5 +1,6 @@
 package com.mysugr.example.identitydemo.service;
 
+import com.mysugr.example.identitydemo.model.AnonymousIdentity;
 import com.mysugr.example.identitydemo.model.EmailIdentity;
 import com.mysugr.example.identitydemo.model.PhoneIdentity;
 import com.mysugr.example.identitydemo.model.User;
@@ -49,5 +50,12 @@ public class DemoService {
         phoneId.setId(UUID.randomUUID().toString());
         phoneId.setUser(user);
         return phoneIdentityRepo.save(phoneId);
+    }
+
+    public AnonymousIdentity createAnonymousIdentity(User user, String identifier) {
+        AnonymousIdentity anonymousId = new AnonymousIdentity(identifier);
+        anonymousId.setId(UUID.randomUUID().toString());
+        anonymousId.setUser(user);
+        return anonymousIdentityRepo.save(anonymousId);
     }
 }

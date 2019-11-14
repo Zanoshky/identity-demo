@@ -1,6 +1,7 @@
 package com.mysugr.example.identitydemo.controller;
 
 import com.mysugr.example.identitydemo.dto.UserCreation;
+import com.mysugr.example.identitydemo.model.AnonymousIdentity;
 import com.mysugr.example.identitydemo.model.EmailIdentity;
 import com.mysugr.example.identitydemo.model.PhoneIdentity;
 import com.mysugr.example.identitydemo.model.User;
@@ -30,6 +31,11 @@ public class UserController {
         if (userToCreate.getPhoneNumber() != null && userToCreate.getPassword() != null) {
             PhoneIdentity phoneId = demoService.createPhoneId(user, userToCreate.getPhoneNumber(), userToCreate.getPassword());
             user.getIdentities().add(phoneId);
+        }
+
+        if(userToCreate.getIdentifier() != null) {
+            AnonymousIdentity anonymousId = demoService.createAnonymousIdentity(user, userToCreate.getIdentifier());
+            user.getIdentities().add(anonymousId);
         }
 
         return user;
