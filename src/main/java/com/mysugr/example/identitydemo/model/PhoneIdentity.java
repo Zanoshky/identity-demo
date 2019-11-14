@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PhoneIdentity extends Identity {
 
-    @Column
+    @Column(unique = true)
     private String phoneNumber;
 
     @Column

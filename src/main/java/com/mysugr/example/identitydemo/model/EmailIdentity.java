@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class EmailIdentity extends Identity {
 
-    @Column
+    @Column(unique = true)
     private String email;
 
     @Column

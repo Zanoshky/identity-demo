@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AnonymousIdentity extends Identity {
 
-    @Column
+    @Column(unique = true)
     private String identifier;
 
 }
