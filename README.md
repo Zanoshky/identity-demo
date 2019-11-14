@@ -1,7 +1,7 @@
 ### Before starting
 Create a MYSQL Database with following settings:
-username: `root`
-password: `` (empty)
+- username: `root`
+- password: ` ` (empty)
 
 Execute the following SQL Command on MySQL Server
 ```$xslt
